@@ -276,6 +276,7 @@ public class AdminAnalytics extends javax.swing.JFrame {
 
     private void MenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuActionPerformed
        
+
     }//GEN-LAST:event_MenuActionPerformed
 
     
