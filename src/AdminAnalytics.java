@@ -233,8 +233,7 @@ public class AdminAnalytics extends javax.swing.JFrame {
         try {
              Statement stmt = (Statement) con.createStatement();
              ResultSet rs = stmt.executeQuery(query);
-           // stmt = con.createStatement();
-            //rs = stmt.executeQuery("SELECT Joined,Ratings,LastOnline,TotalTime,FavouriteLanguage,WorstLanguage,LanguagesCompleted,LanguagesLeft,LevelsCompleted FROM User where Username = ?");
+          
             while(rs.next()){
                 
             UserName = rs.getString(1);
@@ -282,34 +281,7 @@ public class AdminAnalytics extends javax.swing.JFrame {
     }//GEN-LAST:event_LanglefttxtActionPerformed
 
     private void MenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuActionPerformed
-        Connection con = ConnectDB.getConnection();
-        Statement stmt = null;
-        String sqlString = ("INSERT INTO User  \n"
-              +  "VALUES (011, 'Luffy','straw_hat@yonko.com','OnePiece','20-6-2021',10,'03-05-2022','244min','Japanese','Da_gozaru',2,1,1)\n");
-        try {
-            con.setAutoCommit(false);
-            stmt = con.createStatement();
-            stmt.executeUpdate(sqlString);
-            stmt.close();
-            con.commit();
-        } catch (SQLException ex) {
-            System.err.println("SQLException: " + ex.getMessage());
-        } finally {
-            if (stmt != null) {
-                try {
-                    stmt.close();
-                } catch (SQLException e) {
-                    System.err.println("SQLException: " + e.getMessage());
-                }
-            }
-            if (con != null) {
-                try {
-                    con.close();
-                } catch (SQLException e) {
-                    System.err.println("SQLException: " + e.getMessage());
-                }
-            }
-        }
+       
     }//GEN-LAST:event_MenuActionPerformed
 
     
