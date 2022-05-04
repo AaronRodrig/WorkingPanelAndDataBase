@@ -220,12 +220,9 @@ public class AdminAnalytics extends javax.swing.JFrame {
             String UserTotalTime = totaltimetxt.getText();
             String UserJoined = Joinedtxt.getText();
             
-          /*  Connection con = ConnectDB.getConnection();
-            Statement stmt;
-            ResultSet rs;
-            if(SearchBar.equals(UserName)){*/
+         
           Connection con = ConnectDB.getConnection();
-         // Statement stmt = (Statement) con.createStatement();
+       
           
           String query = ("SELECT Joined,Ratings,LastOnline,TotalTime,FavouriteLanguage,WorstLanguage,LanguagesCompleted,LanguagesLeft,LevelsCompleted FROM User where UserName ='" +UserName+ "'");
           
