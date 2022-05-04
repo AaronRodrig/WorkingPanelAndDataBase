@@ -14,9 +14,8 @@ public class InsertTable {
         public static void insertEmp() {
         Connection con = ConnectDB.getConnection();
         Statement stmt = null;
-        String sqlString = ("INSERT INTO Employee  \n"
-              +  "VALUES (1066789101, 'Simpson', 'Worker', 20010),\n"
-              + "(1066789102, 'Walker', 'Worker', 12345)");
+        String sqlString = ("INSERT INTO User  \n"
+              +  "VALUES (05, 'Godrick', 'godrick02@yahoo.com', 'GoldFall','1-11-21',3,02-02-2022,'89 mins','English','Spanish',0,4,2)\n");
         try {
             con.setAutoCommit(false);
             stmt = con.createStatement();
@@ -42,4 +41,8 @@ public class InsertTable {
             }
         }
     }
+        
+        public static void main(String[] args) {
+        insertEmp();
+    }    
 }
