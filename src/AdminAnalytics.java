@@ -233,9 +233,7 @@ public class AdminAnalytics extends javax.swing.JFrame {
           
             while(rs.next()){
                 
-            UserName = rs.getString(1);
-                
-                
+            UserName = rs.getString(1);      
             Userfavourite = rs.getString(1);
             UserRating = rs.getString(1);
             UserLangCom = rs.getString(1);
@@ -246,8 +244,7 @@ public class AdminAnalytics extends javax.swing.JFrame {
             UserTotalTime = rs.getString(1);
             UserJoined = rs.getString(1);
             
-            
-            
+          
             favouritetxt.setText(rs.getString("FavouriteLanguage"));
             worsttxt.setText(rs.getString("WorstLanguage"));
             Joinedtxt.setText(rs.getString("Joined"));
